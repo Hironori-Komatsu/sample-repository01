@@ -18,6 +18,10 @@ test('Bootstrap Buttonsページが表示される', async({page}) => {
     await primary.click();
     await expect(page).toHaveURL(/buttons/);
 
+    await expect(primary).toBeEnabled();
+    await primary.click();
+    await expect(page).toHaveURL(/components\/buttons/);
+
 
 });
 
